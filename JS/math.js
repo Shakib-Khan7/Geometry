@@ -1,5 +1,16 @@
 
+function randomColor(){
+    let color = [];
+    for (let i = 0 ; i<3 ; i++){
+        color.push(Math.floor(Math.random()*256));
+    }
+    return 'rgb('+ color.join(', ')+ ')';
+}
 
+const mycard = document.getElementById('card1');
+mycard.addEventListener('mouseover',function(){
+    mycard.style.backgroundColor = randomColor();
+})
 
 
 function getElemenValueById(firstInput, secondInput) {
